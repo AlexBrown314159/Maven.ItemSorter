@@ -7,19 +7,14 @@ import java.util.Comparator;
 /**
  * @author leon on 30/01/2019.
  */
-public class IdComparator {
 
 
+public class IdComparator implements Comparator<Item> {
 
+        public int compare(Item o1, Item o2) {
 
-
-
-
-    Comparator<Item> idComparator = (Comparator<Item>) new IdComparator();
-
-
-
-
-
+            return Long.compare(o1.getId(), o2.getId());
+        }
 
 }
+
